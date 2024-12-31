@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayrand's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #162447;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .nav button {
+            background-color: #1f4068;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .nav button:hover {
+            background-color: #e43f5a;
+        }
+
+        .content {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .about img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #162447;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('visible');
+                section.classList.add('hidden');
+            });
+
+            document.getElementById(sectionId).classList.remove('hidden');
+            document.getElementById(sectionId).classList.add('visible');
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Ayrand's Portfolio</h1>
+    </div>
+
+    <div class="nav">
+        <button onclick="showSection('about')">About Me</button>
+        <button onclick="showSection('hobbies')">Hobbies</button>
+        <button onclick="showSection('interests')">Interests</button>
+    </div>
+
+    <div class="content">
+        <div id="about" class="section visible">
+            <img src="49255446_792991014420421_6654119538075893760_n.jpg" alt="Ayrand's Photo">
+            <h2>About Me</h2>
+            <p>Name: Ayrand B. Gunda</p>
+            <p>From: Bambang, Nagcarlan Laguna</p>
+            <p>Age: 19 years old</p>
+            <p>I like playing games!</p>
+        </div>
+
+        <div id="hobbies" class="section hidden">
+            <h2>Hobbies</h2>
+            <p><strong>Online Games:</strong> I like online games because they help me relieve stress, and it's how I improved my English more than school.</p>
+            <p><strong>Arts:</strong> Creating art feels amazing when I finish a piece that looks good.</p>
+            <p><strong>Watching Anime:</strong> I learn some Japanese phrases and enjoy interesting stories.</p>
+        </div>
+
+        <div id="interests" class="section hidden">
+            <h2>Interests</h2>
+            <p>I enjoy talking about the future, finding ways to earn more money, improving my art style, and considering becoming a streamer to fund my interests.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ayrand's Portfolio</p>
+    </footer>
+</body>
+</html>
